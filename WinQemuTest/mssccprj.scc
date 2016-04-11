@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[WinQemuTest.vcproj]
+SCC_Aux_Path = "Y:\SourceSafe\WinEmulator"
+SCC_Project_Name = "$/Branch/WinQemu v0.10.2/WinQemuTest", QSDAAAAA

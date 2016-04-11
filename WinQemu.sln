@@ -1,0 +1,197 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinQemu", "WinQemu.vcproj", "{043CD6CD-5932-4FFE-A2E5-173B7682D109}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fmod api 3.75", "fmod api 3.75", "{4304281E-647D-4320-A861-DCE566D5F8E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{8D7DDB59-8569-4C30-B6C3-57BE3DCB816B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inc", "inc", "{B17804C9-5EA3-419D-BE8C-7E739F8C2BDF}"
+	ProjectSection(SolutionItems) = preProject
+		fmod api 3.75\api\inc\fmod.h = fmod api 3.75\api\inc\fmod.h
+		fmod api 3.75\api\inc\fmod_errors.h = fmod api 3.75\api\inc\fmod_errors.h
+		fmod api 3.75\api\inc\fmoddyn.h = fmod api 3.75\api\inc\fmoddyn.h
+		fmod api 3.75\api\inc\wincompat.h = fmod api 3.75\api\inc\wincompat.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{06367FF7-C8A8-4B93-822D-907C50F24771}"
+	ProjectSection(SolutionItems) = preProject
+		fmod api 3.75\api\lib\fmod64vc.lib = fmod api 3.75\api\lib\fmod64vc.lib
+		fmod api 3.75\api\lib\fmodvc.lib = fmod api 3.75\api\lib\fmodvc.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "zlib", "zlib", "{F894ACF9-5F07-4D69-96E9-CE72FB3B5595}"
+	ProjectSection(SolutionItems) = preProject
+		zlib\crc32.h = zlib\crc32.h
+		zlib\deflate.h = zlib\deflate.h
+		zlib\inffast.h = zlib\inffast.h
+		zlib\inffixed.h = zlib\inffixed.h
+		zlib\inflate.h = zlib\inflate.h
+		zlib\inftrees.h = zlib\inftrees.h
+		zlib\mozzconf.h = zlib\mozzconf.h
+		zlib\trees.h = zlib\trees.h
+		zlib\zconf.h = zlib\zconf.h
+		zlib\zlib.h = zlib\zlib.h
+		zlib\zutil.h = zlib\zutil.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{9D72AF70-790F-4D24-9098-BB56ADD1D41F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug", "Debug", "{6FC37FE1-6383-426A-A60C-BCC0C5C39581}"
+	ProjectSection(SolutionItems) = preProject
+		libs\Debug\fmodvc.lib = libs\Debug\fmodvc.lib
+		libs\Debug\pxwc.lib = libs\Debug\pxwc.lib
+		libs\Debug\SDL.lib = libs\Debug\SDL.lib
+		libs\Debug\zlib.lib = libs\Debug\zlib.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{867F01E8-6152-4618-B77E-048D684D10C0}"
+	ProjectSection(SolutionItems) = preProject
+		libs\Release\fmodvc.lib = libs\Release\fmodvc.lib
+		libs\Release\pxwc.lib = libs\Release\pxwc.lib
+		libs\Release\SDL.lib = libs\Release\SDL.lib
+		libs\Release\zlib.lib = libs\Release\zlib.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ia32", "ia32", "{0039BCDC-C947-4DC0-84EA-1BF1F2BE05E9}"
+	ProjectSection(SolutionItems) = preProject
+		libs\ia32\libirc.lib = libs\ia32\libirc.lib
+		libs\ia32\libmmds.lib = libs\ia32\libmmds.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{3F9F847E-3014-4731-B112-C2D054D67D9C}"
+	ProjectSection(SolutionItems) = preProject
+		libs\x64\libirc.lib = libs\x64\libirc.lib
+		libs\x64\libmmds.lib = libs\x64\libmmds.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{4C8883A6-8429-4E42-A900-0D4739C8F96C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debug", "Debug", "{EF7E74A1-0FF9-4411-BD5B-617F06708AD0}"
+	ProjectSection(SolutionItems) = preProject
+		bin\Debug\fmod.dll = bin\Debug\fmod.dll
+		bin\Debug\SDL.dll = bin\Debug\SDL.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{DC949F40-2D62-4CE5-B1F4-D2CAED308BA2}"
+	ProjectSection(SolutionItems) = preProject
+		bin\Release\fmod.dll = bin\Release\fmod.dll
+		bin\Release\SDL.dll = bin\Release\SDL.dll
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinQemuTest", "WinQemuTest\WinQemuTest.vcproj", "{37B9A41C-2460-44D8-BA57-955D25D76A4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pxwc", "pxwc", "{5C04660C-396B-4908-9866-3FE95CB355E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inc", "inc", "{C450D1D4-96C2-400E-9780-C91B811BC8B3}"
+	ProjectSection(SolutionItems) = preProject
+		pxwc\inc\alloca.h = pxwc\inc\alloca.h
+		pxwc\inc\dirent.h = pxwc\inc\dirent.h
+		pxwc\inc\endian.h = pxwc\inc\endian.h
+		pxwc\inc\err.h = pxwc\inc\err.h
+		pxwc\inc\features.h = pxwc\inc\features.h
+		pxwc\inc\fenv.h = pxwc\inc\fenv.h
+		pxwc\inc\getopt.h = pxwc\inc\getopt.h
+		pxwc\inc\inttypes.h = pxwc\inc\inttypes.h
+		pxwc\inc\pxwc.h = pxwc\inc\pxwc.h
+		pxwc\inc\readlink.h = pxwc\inc\readlink.h
+		pxwc\inc\regex.h = pxwc\inc\regex.h
+		pxwc\inc\sched.h = pxwc\inc\sched.h
+		pxwc\inc\stdbool.h = pxwc\inc\stdbool.h
+		pxwc\inc\stdint.h = pxwc\inc\stdint.h
+		pxwc\inc\strings.h = pxwc\inc\strings.h
+		pxwc\inc\unistd.h = pxwc\inc\unistd.h
+		pxwc\inc\utime.h = pxwc\inc\utime.h
+		pxwc\inc\win_paths.c = pxwc\inc\win_paths.c
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bits", "bits", "{0ABD542B-B16C-4A71-BF48-9011C79674A6}"
+	ProjectSection(SolutionItems) = preProject
+		pxwc\inc\bits\fenv.h = pxwc\inc\bits\fenv.h
+		pxwc\inc\bits\huge.h = pxwc\inc\bits\huge.h
+		pxwc\inc\bits\libc-lock.h = pxwc\inc\bits\libc-lock.h
+		pxwc\inc\bits\locale.h = pxwc\inc\bits\locale.h
+		pxwc\inc\bits\mathdef.h = pxwc\inc\bits\mathdef.h
+		pxwc\inc\bits\mathinline.h = pxwc\inc\bits\mathinline.h
+		pxwc\inc\bits\nan.h = pxwc\inc\bits\nan.h
+		pxwc\inc\bits\pthreaddef.h = pxwc\inc\bits\pthreaddef.h
+		pxwc\inc\bits\pthreadtypes.h = pxwc\inc\bits\pthreadtypes.h
+		pxwc\inc\bits\resource.h = pxwc\inc\bits\resource.h
+		pxwc\inc\bits\scheddef.h = pxwc\inc\bits\scheddef.h
+		pxwc\inc\bits\sigaction.h = pxwc\inc\bits\sigaction.h
+		pxwc\inc\bits\sigaltstack.h = pxwc\inc\bits\sigaltstack.h
+		pxwc\inc\bits\sigevent.h = pxwc\inc\bits\sigevent.h
+		pxwc\inc\bits\siginfo.h = pxwc\inc\bits\siginfo.h
+		pxwc\inc\bits\signum.h = pxwc\inc\bits\signum.h
+		pxwc\inc\bits\sigset.h = pxwc\inc\bits\sigset.h
+		pxwc\inc\bits\sigvec.h = pxwc\inc\bits\sigvec.h
+		pxwc\inc\bits\stdio-lock.h = pxwc\inc\bits\stdio-lock.h
+		pxwc\inc\bits\stdio.h = pxwc\inc\bits\stdio.h
+		pxwc\inc\bits\stdio_lim.h = pxwc\inc\bits\stdio_lim.h
+		pxwc\inc\bits\string.h = pxwc\inc\bits\string.h
+		pxwc\inc\bits\string2.h = pxwc\inc\bits\string2.h
+		pxwc\inc\bits\timeval.h = pxwc\inc\bits\timeval.h
+		pxwc\inc\bits\types.h = pxwc\inc\bits\types.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "confix_wa", "confix_wa", "{4FAB551C-1B51-487F-902E-3B45C7C93BE5}"
+	ProjectSection(SolutionItems) = preProject
+		pxwc\inc\confix_wa\times.h = pxwc\inc\confix_wa\times.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sys", "sys", "{F839259D-F9D8-4D77-98DA-49EDA85FAE42}"
+	ProjectSection(SolutionItems) = preProject
+		pxwc\inc\sys\file.h = pxwc\inc\sys\file.h
+		pxwc\inc\sys\param.h = pxwc\inc\sys\param.h
+		pxwc\inc\sys\resource.h = pxwc\inc\sys\resource.h
+		pxwc\inc\sys\select.h = pxwc\inc\sys\select.h
+		pxwc\inc\sys\socket.h = pxwc\inc\sys\socket.h
+		pxwc\inc\sys\sysmacros.h = pxwc\inc\sys\sysmacros.h
+		pxwc\inc\sys\time.h = pxwc\inc\sys\time.h
+		pxwc\inc\sys\types.h = pxwc\inc\sys\types.h
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WinQemu.vcproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = WinQemuTest\\WinQemuTest.vcproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = WinQemuTest\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{043CD6CD-5932-4FFE-A2E5-173B7682D109}.Debug|Win32.ActiveCfg = Debug|Win32
+		{043CD6CD-5932-4FFE-A2E5-173B7682D109}.Debug|Win32.Build.0 = Debug|Win32
+		{043CD6CD-5932-4FFE-A2E5-173B7682D109}.Release|Win32.ActiveCfg = Release|Win32
+		{043CD6CD-5932-4FFE-A2E5-173B7682D109}.Release|Win32.Build.0 = Release|Win32
+		{37B9A41C-2460-44D8-BA57-955D25D76A4F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{37B9A41C-2460-44D8-BA57-955D25D76A4F}.Debug|Win32.Build.0 = Debug|Win32
+		{37B9A41C-2460-44D8-BA57-955D25D76A4F}.Release|Win32.ActiveCfg = Release|Win32
+		{37B9A41C-2460-44D8-BA57-955D25D76A4F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D7DDB59-8569-4C30-B6C3-57BE3DCB816B} = {4304281E-647D-4320-A861-DCE566D5F8E0}
+		{B17804C9-5EA3-419D-BE8C-7E739F8C2BDF} = {8D7DDB59-8569-4C30-B6C3-57BE3DCB816B}
+		{06367FF7-C8A8-4B93-822D-907C50F24771} = {8D7DDB59-8569-4C30-B6C3-57BE3DCB816B}
+		{6FC37FE1-6383-426A-A60C-BCC0C5C39581} = {9D72AF70-790F-4D24-9098-BB56ADD1D41F}
+		{867F01E8-6152-4618-B77E-048D684D10C0} = {9D72AF70-790F-4D24-9098-BB56ADD1D41F}
+		{0039BCDC-C947-4DC0-84EA-1BF1F2BE05E9} = {9D72AF70-790F-4D24-9098-BB56ADD1D41F}
+		{3F9F847E-3014-4731-B112-C2D054D67D9C} = {9D72AF70-790F-4D24-9098-BB56ADD1D41F}
+		{EF7E74A1-0FF9-4411-BD5B-617F06708AD0} = {4C8883A6-8429-4E42-A900-0D4739C8F96C}
+		{DC949F40-2D62-4CE5-B1F4-D2CAED308BA2} = {4C8883A6-8429-4E42-A900-0D4739C8F96C}
+		{C450D1D4-96C2-400E-9780-C91B811BC8B3} = {5C04660C-396B-4908-9866-3FE95CB355E5}
+		{0ABD542B-B16C-4A71-BF48-9011C79674A6} = {C450D1D4-96C2-400E-9780-C91B811BC8B3}
+		{4FAB551C-1B51-487F-902E-3B45C7C93BE5} = {C450D1D4-96C2-400E-9780-C91B811BC8B3}
+		{F839259D-F9D8-4D77-98DA-49EDA85FAE42} = {C450D1D4-96C2-400E-9780-C91B811BC8B3}
+	EndGlobalSection
+EndGlobal
