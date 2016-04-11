@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinQemu", "WinQemu.vcproj", "{043CD6CD-5932-4FFE-A2E5-173B7682D109}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pxwc", "pxwc\pxwc.vcproj", "{2731C51C-792D-4C82-8B1C-5761ABC43E1C}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = pxwc\\pxwc.vcproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = pxwc\\
+		SccProjectUniqueName2 = WinQemu.vcproj
+		SccLocalPath2 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{043CD6CD-5932-4FFE-A2E5-173B7682D109}.Debug|Win32.ActiveCfg = Debug|Win32
+		{043CD6CD-5932-4FFE-A2E5-173B7682D109}.Debug|Win32.Build.0 = Debug|Win32
+		{043CD6CD-5932-4FFE-A2E5-173B7682D109}.Release|Win32.ActiveCfg = Release|Win32
+		{043CD6CD-5932-4FFE-A2E5-173B7682D109}.Release|Win32.Build.0 = Release|Win32
+		{2731C51C-792D-4C82-8B1C-5761ABC43E1C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2731C51C-792D-4C82-8B1C-5761ABC43E1C}.Debug|Win32.Build.0 = Debug|Win32
+		{2731C51C-792D-4C82-8B1C-5761ABC43E1C}.Release|Win32.ActiveCfg = Release|Win32
+		{2731C51C-792D-4C82-8B1C-5761ABC43E1C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
