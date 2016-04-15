@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="qemu">
+      <UniqueIdentifier>{8dae7969-56ff-4de2-8eef-0f6bf934db05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="posix">
+      <UniqueIdentifier>{188c6379-2849-433f-b0a3-5ce7a1641bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="posix\include">
+      <UniqueIdentifier>{159adad8-ad44-4a36-835b-a00bd3d68463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="posix\include\sys">
+      <UniqueIdentifier>{efe4738d-c69d-4937-a405-53f843ec794e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qemu\include">
+      <UniqueIdentifier>{00ac3618-d989-4c4b-bf29-a73043e912d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qemu\include\block">
+      <UniqueIdentifier>{48ef1593-59e0-462d-987a-3cf2265434b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qemu\include\crypto">
+      <UniqueIdentifier>{5c2b3000-1ebc-49c1-872e-800424798f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qemu\include\disas">
+      <UniqueIdentifier>{2b9ae097-e09d-4b6e-a4b3-cc49f939bc1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qemu\include\exec">
+      <UniqueIdentifier>{0f550adf-c52e-4192-a579-9a88167320a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qemu\include\exec\user">
+      <UniqueIdentifier>{81e478a0-5c71-4240-aa8b-c8ae0ad6bdce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qemu\trace">
+      <UniqueIdentifier>{fa128e28-2616-4b6b-8bd5-f3c35a66acf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qemu\tcg">
+      <UniqueIdentifier>{b2091384-111c-48f7-9aa4-f4dad3431162}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\qemu-options.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\qemu-options-wrapper.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\softmmu_template.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\translate-all.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\hmp.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\config-host.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="posix\include\strings.h">
+      <Filter>posix\include</Filter>
+    </ClInclude>
+    <ClInclude Include="posix\include\sys\time.h">
+      <Filter>posix\include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\qmp-commands.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\config.h">
+      <Filter>qemu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\elf.h">
+      <Filter>qemu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\glib-compat.h">
+      <Filter>qemu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\qemu-common.h">
+      <Filter>qemu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\qemu-io.h">
+      <Filter>qemu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\qjson.h">
+      <Filter>qemu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\trace.h">
+      <Filter>qemu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\trace-tcg.h">
+      <Filter>qemu\include</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\accounting.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\aio.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\block.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\block_int.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\blockjob.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\nbd.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\qapi.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\scsi.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\snapshot.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\thread-pool.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\throttle-groups.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\block\write-threshold.h">
+      <Filter>qemu\include\block</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\aes.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\cipher.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\desrfb.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\hash.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\init.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\tlscreds.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\tlscredsanon.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\tlscredsx509.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\crypto\tlssession.h">
+      <Filter>qemu\include\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\disas\bfd.h">
+      <Filter>qemu\include\disas</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\disas\disas.h">
+      <Filter>qemu\include\disas</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\address-spaces.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\cpu_ldst.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\cpu_ldst_template.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\cpu_ldst_useronly_template.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\cpu-all.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\cpu-common.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\cpu-defs.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\cputlb.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\exec-all.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\gdbstub.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\gen-icount.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\helper-gen.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\helper-head.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\helper-proto.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\helper-tcg.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\hwaddr.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\ioport.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\memattrs.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\memory.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\memory-internal.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\poison.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\ram_addr.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\semihost.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\softmmu-semi.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\tb-hash.h">
+      <Filter>qemu\include\exec</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\user\abitypes.h">
+      <Filter>qemu\include\exec\user</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\include\exec\user\thunk.h">
+      <Filter>qemu\include\exec\user</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\control.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\control-internal.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\event-internal.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\ftrace.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\generated-events.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\generated-helpers.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\generated-helpers-wrappers.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\generated-tcg-tracers.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\generated-tracers.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\trace\simple.h">
+      <Filter>qemu\trace</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\qapi-types.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\qapi-visit.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\qapi-event.h">
+      <Filter>qemu</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\tcg\tcg.h">
+      <Filter>qemu\tcg</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\tcg\tcg-be-ldst.h">
+      <Filter>qemu\tcg</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\tcg\tcg-be-null.h">
+      <Filter>qemu\tcg</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\tcg\tcg-op.h">
+      <Filter>qemu\tcg</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\tcg\tcg-opc.h">
+      <Filter>qemu\tcg</Filter>
+    </ClInclude>
+    <ClInclude Include="qemu\tcg\tcg-runtime.h">
+      <Filter>qemu\tcg</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WinQEMU.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\accel.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\aio-win32.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\arch_init.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\async.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\balloon.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\block.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\blockdev.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\blockdev-nbd.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\blockjob.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\bootdevice.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\bt-host.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\bt-vhci.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\cpu-exec-common.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\cpus.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\cputlb.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\device_tree.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\device-hotplug.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\disas.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\dma-helpers.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\dump.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\exec.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\gdbstub.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\hmp.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\iohandler.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\ioport.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\iothread.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\main-loop.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\memory.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\memory_mapping.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\module-common.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\monitor.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\nbd.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\numa.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\os-win32.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\page_cache.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qdev-monitor.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-bridge-helper.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-char.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-img.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-io.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-io-cmds.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-log.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-nbd.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-seccomp.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qemu-timer.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qjson.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qmp.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qtest.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\spice-qemu-char.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\tcg-runtime.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\tci.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\thread-pool.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\thunk.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\tpm.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\translate-all.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\translate-common.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\user-exec.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\vl.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\xen-common.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\xen-common-stub.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\xen-hvm.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\xen-hvm-stub.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\xen-mapcache.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\trace\control.c">
+      <Filter>qemu\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\trace\ftrace.c">
+      <Filter>qemu\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\trace\generated-events.c">
+      <Filter>qemu\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\trace\qmp.c">
+      <Filter>qemu\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\trace\simple.c">
+      <Filter>qemu\trace</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qapi-types.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qapi-visit.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\qapi-event.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\tcg\optimize.c">
+      <Filter>qemu\tcg</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\tcg\tcg.c">
+      <Filter>qemu\tcg</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\tcg\tcg-common.c">
+      <Filter>qemu\tcg</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\tcg\tcg-op.c">
+      <Filter>qemu\tcg</Filter>
+    </ClCompile>
+    <ClCompile Include="qemu\cpu-exec.c">
+      <Filter>qemu</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

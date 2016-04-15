@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54D5002E-CEB0-427F-8075-77A383E53303}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>WinQEMU</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;_CONSOLE;_WINSOCKAPI_;TARGET_I386;NEED_CPU_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\qemu;.\qemu\include;.\qemu\i386-softmmu;.\qemu\target-i386;.\qemu\tcg\i386;.\qemu\tcg;.\posix\include;.\deps\glib\include\glib-2.0;.\deps\glib\lib\glib-2.0\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="posix\include\strings.h" />
+    <ClInclude Include="posix\include\sys\time.h" />
+    <ClInclude Include="qemu\config-host.h" />
+    <ClInclude Include="qemu\hmp.h" />
+    <ClInclude Include="qemu\include\block\accounting.h" />
+    <ClInclude Include="qemu\include\block\aio.h" />
+    <ClInclude Include="qemu\include\block\block.h" />
+    <ClInclude Include="qemu\include\block\blockjob.h" />
+    <ClInclude Include="qemu\include\block\block_int.h" />
+    <ClInclude Include="qemu\include\block\nbd.h" />
+    <ClInclude Include="qemu\include\block\qapi.h" />
+    <ClInclude Include="qemu\include\block\scsi.h" />
+    <ClInclude Include="qemu\include\block\snapshot.h" />
+    <ClInclude Include="qemu\include\block\thread-pool.h" />
+    <ClInclude Include="qemu\include\block\throttle-groups.h" />
+    <ClInclude Include="qemu\include\block\write-threshold.h" />
+    <ClInclude Include="qemu\include\config.h" />
+    <ClInclude Include="qemu\include\crypto\aes.h" />
+    <ClInclude Include="qemu\include\crypto\cipher.h" />
+    <ClInclude Include="qemu\include\crypto\desrfb.h" />
+    <ClInclude Include="qemu\include\crypto\hash.h" />
+    <ClInclude Include="qemu\include\crypto\init.h" />
+    <ClInclude Include="qemu\include\crypto\tlscreds.h" />
+    <ClInclude Include="qemu\include\crypto\tlscredsanon.h" />
+    <ClInclude Include="qemu\include\crypto\tlscredsx509.h" />
+    <ClInclude Include="qemu\include\crypto\tlssession.h" />
+    <ClInclude Include="qemu\include\disas\bfd.h" />
+    <ClInclude Include="qemu\include\disas\disas.h" />
+    <ClInclude Include="qemu\include\elf.h" />
+    <ClInclude Include="qemu\include\exec\address-spaces.h" />
+    <ClInclude Include="qemu\include\exec\cpu-all.h" />
+    <ClInclude Include="qemu\include\exec\cpu-common.h" />
+    <ClInclude Include="qemu\include\exec\cpu-defs.h" />
+    <ClInclude Include="qemu\include\exec\cputlb.h" />
+    <ClInclude Include="qemu\include\exec\cpu_ldst.h" />
+    <ClInclude Include="qemu\include\exec\cpu_ldst_template.h" />
+    <ClInclude Include="qemu\include\exec\cpu_ldst_useronly_template.h" />
+    <ClInclude Include="qemu\include\exec\exec-all.h" />
+    <ClInclude Include="qemu\include\exec\gdbstub.h" />
+    <ClInclude Include="qemu\include\exec\gen-icount.h" />
+    <ClInclude Include="qemu\include\exec\helper-gen.h" />
+    <ClInclude Include="qemu\include\exec\helper-head.h" />
+    <ClInclude Include="qemu\include\exec\helper-proto.h" />
+    <ClInclude Include="qemu\include\exec\helper-tcg.h" />
+    <ClInclude Include="qemu\include\exec\hwaddr.h" />
+    <ClInclude Include="qemu\include\exec\ioport.h" />
+    <ClInclude Include="qemu\include\exec\memattrs.h" />
+    <ClInclude Include="qemu\include\exec\memory-internal.h" />
+    <ClInclude Include="qemu\include\exec\memory.h" />
+    <ClInclude Include="qemu\include\exec\poison.h" />
+    <ClInclude Include="qemu\include\exec\ram_addr.h" />
+    <ClInclude Include="qemu\include\exec\semihost.h" />
+    <ClInclude Include="qemu\include\exec\softmmu-semi.h" />
+    <ClInclude Include="qemu\include\exec\tb-hash.h" />
+    <ClInclude Include="qemu\include\exec\user\abitypes.h" />
+    <ClInclude Include="qemu\include\exec\user\thunk.h" />
+    <ClInclude Include="qemu\include\glib-compat.h" />
+    <ClInclude Include="qemu\include\qemu-common.h" />
+    <ClInclude Include="qemu\include\qemu-io.h" />
+    <ClInclude Include="qemu\include\qjson.h" />
+    <ClInclude Include="qemu\include\trace-tcg.h" />
+    <ClInclude Include="qemu\include\trace.h" />
+    <ClInclude Include="qemu\qapi-event.h" />
+    <ClInclude Include="qemu\qapi-types.h" />
+    <ClInclude Include="qemu\qapi-visit.h" />
+    <ClInclude Include="qemu\qemu-options-wrapper.h" />
+    <ClInclude Include="qemu\qemu-options.h" />
+    <ClInclude Include="qemu\qmp-commands.h" />
+    <ClInclude Include="qemu\softmmu_template.h" />
+    <ClInclude Include="qemu\tcg\tcg-be-ldst.h" />
+    <ClInclude Include="qemu\tcg\tcg-be-null.h" />
+    <ClInclude Include="qemu\tcg\tcg-op.h" />
+    <ClInclude Include="qemu\tcg\tcg-opc.h" />
+    <ClInclude Include="qemu\tcg\tcg-runtime.h" />
+    <ClInclude Include="qemu\tcg\tcg.h" />
+    <ClInclude Include="qemu\trace\control-internal.h" />
+    <ClInclude Include="qemu\trace\control.h" />
+    <ClInclude Include="qemu\trace\event-internal.h" />
+    <ClInclude Include="qemu\trace\ftrace.h" />
+    <ClInclude Include="qemu\trace\generated-events.h" />
+    <ClInclude Include="qemu\trace\generated-helpers-wrappers.h" />
+    <ClInclude Include="qemu\trace\generated-helpers.h" />
+    <ClInclude Include="qemu\trace\generated-tcg-tracers.h" />
+    <ClInclude Include="qemu\trace\generated-tracers.h" />
+    <ClInclude Include="qemu\trace\simple.h" />
+    <ClInclude Include="qemu\translate-all.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="qemu\accel.c" />
+    <ClCompile Include="qemu\aio-win32.c" />
+    <ClCompile Include="qemu\arch_init.c" />
+    <ClCompile Include="qemu\async.c" />
+    <ClCompile Include="qemu\balloon.c" />
+    <ClCompile Include="qemu\block.c" />
+    <ClCompile Include="qemu\blockdev-nbd.c" />
+    <ClCompile Include="qemu\blockdev.c" />
+    <ClCompile Include="qemu\blockjob.c" />
+    <ClCompile Include="qemu\bootdevice.c" />
+    <ClCompile Include="qemu\bt-host.c" />
+    <ClCompile Include="qemu\bt-vhci.c" />
+    <ClCompile Include="qemu\cpu-exec-common.c" />
+    <ClCompile Include="qemu\cpu-exec.c" />
+    <ClCompile Include="qemu\cpus.c" />
+    <ClCompile Include="qemu\cputlb.c" />
+    <ClCompile Include="qemu\device-hotplug.c" />
+    <ClCompile Include="qemu\device_tree.c" />
+    <ClCompile Include="qemu\disas.c" />
+    <ClCompile Include="qemu\dma-helpers.c" />
+    <ClCompile Include="qemu\dump.c" />
+    <ClCompile Include="qemu\exec.c" />
+    <ClCompile Include="qemu\gdbstub.c" />
+    <ClCompile Include="qemu\hmp.c" />
+    <ClCompile Include="qemu\iohandler.c" />
+    <ClCompile Include="qemu\ioport.c" />
+    <ClCompile Include="qemu\iothread.c" />
+    <ClCompile Include="qemu\main-loop.c" />
+    <ClCompile Include="qemu\memory.c" />
+    <ClCompile Include="qemu\memory_mapping.c" />
+    <ClCompile Include="qemu\module-common.c" />
+    <ClCompile Include="qemu\monitor.c" />
+    <ClCompile Include="qemu\nbd.c" />
+    <ClCompile Include="qemu\numa.c" />
+    <ClCompile Include="qemu\os-win32.c" />
+    <ClCompile Include="qemu\page_cache.c" />
+    <ClCompile Include="qemu\qapi-event.c" />
+    <ClCompile Include="qemu\qapi-types.c" />
+    <ClCompile Include="qemu\qapi-visit.c" />
+    <ClCompile Include="qemu\qdev-monitor.c" />
+    <ClCompile Include="qemu\qemu-bridge-helper.c" />
+    <ClCompile Include="qemu\qemu-char.c" />
+    <ClCompile Include="qemu\qemu-img.c" />
+    <ClCompile Include="qemu\qemu-io-cmds.c" />
+    <ClCompile Include="qemu\qemu-io.c" />
+    <ClCompile Include="qemu\qemu-log.c" />
+    <ClCompile Include="qemu\qemu-nbd.c" />
+    <ClCompile Include="qemu\qemu-seccomp.c" />
+    <ClCompile Include="qemu\qemu-timer.c" />
+    <ClCompile Include="qemu\qjson.c" />
+    <ClCompile Include="qemu\qmp.c" />
+    <ClCompile Include="qemu\qtest.c" />
+    <ClCompile Include="qemu\spice-qemu-char.c" />
+    <ClCompile Include="qemu\tcg-runtime.c" />
+    <ClCompile Include="qemu\tcg\optimize.c" />
+    <ClCompile Include="qemu\tcg\tcg-common.c" />
+    <ClCompile Include="qemu\tcg\tcg-op.c" />
+    <ClCompile Include="qemu\tcg\tcg.c" />
+    <ClCompile Include="qemu\tci.c" />
+    <ClCompile Include="qemu\thread-pool.c" />
+    <ClCompile Include="qemu\thunk.c" />
+    <ClCompile Include="qemu\tpm.c" />
+    <ClCompile Include="qemu\trace\control.c" />
+    <ClCompile Include="qemu\trace\ftrace.c" />
+    <ClCompile Include="qemu\trace\generated-events.c" />
+    <ClCompile Include="qemu\trace\qmp.c" />
+    <ClCompile Include="qemu\trace\simple.c" />
+    <ClCompile Include="qemu\translate-all.c" />
+    <ClCompile Include="qemu\translate-common.c" />
+    <ClCompile Include="qemu\user-exec.c" />
+    <ClCompile Include="qemu\vl.c" />
+    <ClCompile Include="qemu\xen-common-stub.c" />
+    <ClCompile Include="qemu\xen-common.c" />
+    <ClCompile Include="qemu\xen-hvm-stub.c" />
+    <ClCompile Include="qemu\xen-hvm.c" />
+    <ClCompile Include="qemu\xen-mapcache.c" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="WinQEMU.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
