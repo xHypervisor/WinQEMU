@@ -69,7 +69,7 @@ struct xsd_errors
 /* LINTED: static unused */
 static struct xsd_errors xsd_errors[]
 #if defined(__GNUC__)
-__attribute__((unused))
+ATTRIBUTE_UNUSED
 #endif
     = {
     XSD_ERROR(EINVAL),

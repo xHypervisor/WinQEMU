@@ -87,8 +87,8 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;_CONSOLE;_WINSOCKAPI_;TARGET_I386;NEED_CPU_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\qemu;.\qemu\include;.\qemu\i386-softmmu;.\qemu\target-i386;.\qemu\tcg\i386;.\qemu\tcg;.\posix\include;.\deps\glib\include\glib-2.0;.\deps\glib\lib\glib-2.0\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;_CONSOLE;_WINSOCKAPI_;TARGET_I386;__i386__;NEED_CPU_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\qemu;.\qemu\include;.\qemu\i386-softmmu;.\qemu\target-i386;.\qemu\tcg\i386;.\qemu\tcg;.\posix\include;.\deps\glib\include\glib-2.0;.\deps\glib\lib\glib-2.0\include;.\deps\pixman\include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -222,6 +222,7 @@
     <ClInclude Include="qemu\tcg\tcg-opc.h" />
     <ClInclude Include="qemu\tcg\tcg-runtime.h" />
     <ClInclude Include="qemu\tcg\tcg.h" />
+    <ClInclude Include="qemu\tcg\tci\tcg-target.h" />
     <ClInclude Include="qemu\trace\control-internal.h" />
     <ClInclude Include="qemu\trace\control.h" />
     <ClInclude Include="qemu\trace\event-internal.h" />
@@ -259,7 +260,9 @@
     <ClCompile Include="qemu\dma-helpers.c" />
     <ClCompile Include="qemu\dump.c" />
     <ClCompile Include="qemu\exec.c" />
-    <ClCompile Include="qemu\gdbstub.c" />
+    <ClCompile Include="qemu\gdbstub.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="qemu\hmp.c" />
     <ClCompile Include="qemu\iohandler.c" />
     <ClCompile Include="qemu\ioport.c" />
@@ -279,7 +282,10 @@
     <ClCompile Include="qemu\qdev-monitor.c" />
     <ClCompile Include="qemu\qemu-bridge-helper.c" />
     <ClCompile Include="qemu\qemu-char.c" />
-    <ClCompile Include="qemu\qemu-img.c" />
+    <ClCompile Include="qemu\qemu-img.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="qemu\qemu-io-cmds.c" />
     <ClCompile Include="qemu\qemu-io.c" />
     <ClCompile Include="qemu\qemu-log.c" />
@@ -295,9 +301,14 @@
     <ClCompile Include="qemu\tcg\tcg-common.c" />
     <ClCompile Include="qemu\tcg\tcg-op.c" />
     <ClCompile Include="qemu\tcg\tcg.c" />
+    <ClCompile Include="qemu\tcg\tci\tcg-target.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="qemu\tci.c" />
     <ClCompile Include="qemu\thread-pool.c" />
-    <ClCompile Include="qemu\thunk.c" />
+    <ClCompile Include="qemu\thunk.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="qemu\tpm.c" />
     <ClCompile Include="qemu\trace\control.c" />
     <ClCompile Include="qemu\trace\ftrace.c" />
@@ -306,13 +317,7 @@
     <ClCompile Include="qemu\trace\simple.c" />
     <ClCompile Include="qemu\translate-all.c" />
     <ClCompile Include="qemu\translate-common.c" />
-    <ClCompile Include="qemu\user-exec.c" />
     <ClCompile Include="qemu\vl.c" />
-    <ClCompile Include="qemu\xen-common-stub.c" />
-    <ClCompile Include="qemu\xen-common.c" />
-    <ClCompile Include="qemu\xen-hvm-stub.c" />
-    <ClCompile Include="qemu\xen-hvm.c" />
-    <ClCompile Include="qemu\xen-mapcache.c" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="WinQEMU.cpp" />
   </ItemGroup>

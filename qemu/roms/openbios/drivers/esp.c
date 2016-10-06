@@ -284,13 +284,13 @@ ob_sd_read_blocks(sd_private_t **sd)
 }
 
 static void
-ob_sd_block_size(__attribute__((unused))sd_private_t **sd)
+ob_sd_block_size(ATTRIBUTE_UNUSEDsd_private_t **sd)
 {
     PUSH(512);
 }
 
 static void
-ob_sd_open(__attribute__((unused))sd_private_t **sd)
+ob_sd_open(ATTRIBUTE_UNUSEDsd_private_t **sd)
 {
     int ret = 1, id;
     phandle_t ph;
@@ -323,7 +323,7 @@ ob_sd_open(__attribute__((unused))sd_private_t **sd)
 }
 
 static void
-ob_sd_close(__attribute__((unused)) sd_private_t **sd)
+ob_sd_close(ATTRIBUTE_UNUSED sd_private_t **sd)
 {
     selfword("close-deblocker");
 }
@@ -401,7 +401,7 @@ espdma_init(unsigned int slot, uint64_t base, unsigned long offset,
 }
 
 static void
-ob_esp_initialize(__attribute__((unused)) esp_private_t **esp)
+ob_esp_initialize(ATTRIBUTE_UNUSED esp_private_t **esp)
 {
     phandle_t ph = get_cur_dev();
 
@@ -430,14 +430,14 @@ ob_esp_initialize(__attribute__((unused)) esp_private_t **esp)
 }
 
 static void
-ob_esp_decodeunit(__attribute__((unused)) esp_private_t **esp)
+ob_esp_decodeunit(ATTRIBUTE_UNUSED esp_private_t **esp)
 {
     fword("decode-unit-scsi");
 }
 
 
 static void
-ob_esp_encodeunit(__attribute__((unused)) esp_private_t **esp)
+ob_esp_encodeunit(ATTRIBUTE_UNUSED esp_private_t **esp)
 {
     fword("encode-unit-scsi");
 }

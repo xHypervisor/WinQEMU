@@ -18,7 +18,11 @@
 /* For C11 atomic ops */
 
 /* Compiler barrier */
+#ifndef _MSC_VER
 #define barrier()   ({ asm volatile("" ::: "memory"); (void)0; })
+#else
+#define barrier()  MemoryBarrier()
+#endif
 
 #ifdef _MSC_VER
 #define __sync_synchronize MemoryBarrier
@@ -41,7 +45,11 @@
 #if defined __x86_64__
 #define smp_mb()    ({ asm volatile("mfence" ::: "memory"); (void)0; })
 #else
+#ifndef _MSC_VER
 #define smp_mb()    ({ asm volatile("lock; addl $0,0(%%esp) " ::: "memory"); (void)0; })
+#else // NOTIFY NOTIFY   
+#define smp_mb()   MemoryBarrier() 
+#endif
 #endif
 #endif
 #endif

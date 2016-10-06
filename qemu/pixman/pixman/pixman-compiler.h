@@ -25,7 +25,7 @@
 #endif
 
 #if defined (__GNUC__)
-#  define MAYBE_UNUSED  __attribute__((unused))
+#  define MAYBE_UNUSED  ATTRIBUTE_UNUSED
 #else
 #  define MAYBE_UNUSED
 #endif

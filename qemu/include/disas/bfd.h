@@ -478,7 +478,11 @@ int generic_symbol_at_address(bfd_vma, struct disassemble_info *);
   (INFO).insn_info_valid = 0
 
 #define _(x) x
+#ifndef _MSC_VER
 #define ATTRIBUTE_UNUSED __attribute__((unused))
+#else
+#define ATTRIBUTE_UNUSED
+#endif
 
 /* from libbfd */
 

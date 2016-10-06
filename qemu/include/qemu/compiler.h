@@ -82,7 +82,7 @@
 /* Convert from a base type to a parent type, with compile time checking.  */
 #ifdef __GNUC__
 #define DO_UPCAST(type, field, dev) ( __extension__ ( { \
-    char __attribute__((unused)) offset_must_be_zero[ \
+    char ATTRIBUTE_UNUSED offset_must_be_zero[ \
         -offsetof(type, field)]; \
     container_of(dev, type, field);}))
 #else
@@ -107,7 +107,7 @@
 
 #ifndef _MSC_VER
 #define QEMU_BUILD_BUG_ON(x) \
-    typedef char glue(qemu_build_bug_on__,__LINE__)[(x)?-1:1] __attribute__((unused));
+    typedef char glue(qemu_build_bug_on__,__LINE__)[(x)?-1:1] ATTRIBUTE_UNUSED;
 #else
 #define QEMU_BUILD_BUG_ON(x) \
     typedef char glue(qemu_build_bug_on__,__LINE__)[(x)?-1:1];

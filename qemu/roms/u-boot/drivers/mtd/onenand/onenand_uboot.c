@@ -20,7 +20,7 @@
 
 struct mtd_info onenand_mtd;
 struct onenand_chip onenand_chip;
-static __attribute__((unused)) char dev_name[] = "onenand0";
+static ATTRIBUTE_UNUSED char dev_name[] = "onenand0";
 
 void onenand_init(void)
 {

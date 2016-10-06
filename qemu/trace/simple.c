@@ -163,7 +163,11 @@ static gpointer writeout_thread(gpointer opaque)
     } dropped;
     unsigned int idx = 0;
     int dropped_count;
+#ifndef _MSC_VER
     size_t unused __attribute__ ((unused));
+#else
+	size_t unused;
+#endif
 
     for (;;) {
         wait_for_trace_records_available();

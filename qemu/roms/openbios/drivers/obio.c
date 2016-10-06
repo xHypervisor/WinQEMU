@@ -397,20 +397,20 @@ ob_smp_init(unsigned long mem_size)
 }
 
 static void
-ob_obio_open(__attribute__((unused))int *idx)
+ob_obio_open(ATTRIBUTE_UNUSEDint *idx)
 {
 	int ret=1;
 	RET ( -ret );
 }
 
 static void
-ob_obio_close(__attribute__((unused))int *idx)
+ob_obio_close(ATTRIBUTE_UNUSEDint *idx)
 {
 	selfword("close-deblocker");
 }
 
 static void
-ob_obio_initialize(__attribute__((unused))int *idx)
+ob_obio_initialize(ATTRIBUTE_UNUSEDint *idx)
 {
     push_str("/");
     fword("find-device");
@@ -459,14 +459,14 @@ ob_set_obio_ranges(uint64_t base)
 }
 
 static void
-ob_obio_decodeunit(__attribute__((unused)) int *idx)
+ob_obio_decodeunit(ATTRIBUTE_UNUSED int *idx)
 {
     fword("decode-unit-sbus");
 }
 
 
 static void
-ob_obio_encodeunit(__attribute__((unused)) int *idx)
+ob_obio_encodeunit(ATTRIBUTE_UNUSED int *idx)
 {
     fword("encode-unit-sbus");
 }

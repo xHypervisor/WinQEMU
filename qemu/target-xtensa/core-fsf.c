@@ -33,7 +33,7 @@
 #include "core-fsf/core-isa.h"
 #include "overlay_tool.h"
 
-static XtensaConfig fsf __attribute__((unused)) = {
+static XtensaConfig fsf ATTRIBUTE_UNUSED = {
     .name = "fsf",
     .gdb_regmap = {
     /* GDB for this core is not supported currently */

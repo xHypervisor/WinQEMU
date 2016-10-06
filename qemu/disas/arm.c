@@ -23,7 +23,11 @@
    for things we don't care about.  */
 
 #include "disas/bfd.h"
+#ifndef _MSC_VER
 #define ATTRIBUTE_UNUSED __attribute__((unused))
+#else
+#define ATTRIBUTE_UNUSED
+#endif
 #define ISSPACE(x) ((x) == ' ' || (x) == '\t' || (x) == '\n')
 
 #define ARM_EXT_V1	 0

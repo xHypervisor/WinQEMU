@@ -179,7 +179,7 @@ int board_eth_init(bd_t *bis)
 {
 	struct fsl_pq_mdio_info mdio_info;
 	struct tsec_info_struct tsec_info[4];
-	ccsr_gur_t *gur __attribute__((unused)) =
+	ccsr_gur_t *gur ATTRIBUTE_UNUSED =
 		(void __iomem *)(CONFIG_SYS_MPC85xx_GUTS_ADDR);
 	int num = 0;
 

@@ -21,7 +21,7 @@
 #define dprintf(_x ...)
 #endif
 
-#define __unused __attribute__((unused))
+#define __unused ATTRIBUTE_UNUSED
 
 struct usb_hcd_ops *head;
 struct usb_dev *devpool;

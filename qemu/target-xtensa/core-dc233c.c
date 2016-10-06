@@ -34,7 +34,7 @@
 #include "core-dc233c/core-isa.h"
 #include "overlay_tool.h"
 
-static XtensaConfig dc233c __attribute__((unused)) = {
+static XtensaConfig dc233c ATTRIBUTE_UNUSED = {
     .name = "dc233c",
     .gdb_regmap = {
         .num_regs = 121,

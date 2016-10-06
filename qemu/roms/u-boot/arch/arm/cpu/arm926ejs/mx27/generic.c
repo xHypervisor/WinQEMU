@@ -94,7 +94,7 @@ static ulong imx_get_ahbclk(void)
 	return lldiv(fref * 2, 3 * div);
 }
 
-static __attribute__((unused)) ulong imx_get_spllclk(void)
+static ATTRIBUTE_UNUSED ulong imx_get_spllclk(void)
 {
 	struct pll_regs *pll = (struct pll_regs *)IMX_PLL_BASE;
 	ulong cscr = readl(&pll->cscr);
@@ -127,14 +127,14 @@ static ulong imx_get_perclk2(void)
 	return imx_decode_perclk(((readl(&pll->pcdr1) >> 8) & 0x3f) + 1);
 }
 
-static __attribute__((unused)) ulong imx_get_perclk3(void)
+static ATTRIBUTE_UNUSED ulong imx_get_perclk3(void)
 {
 	struct pll_regs *pll = (struct pll_regs *)IMX_PLL_BASE;
 
 	return imx_decode_perclk(((readl(&pll->pcdr1) >> 16) & 0x3f) + 1);
 }
 
-static __attribute__((unused)) ulong imx_get_perclk4(void)
+static ATTRIBUTE_UNUSED ulong imx_get_perclk4(void)
 {
 	struct pll_regs *pll = (struct pll_regs *)IMX_PLL_BASE;
 

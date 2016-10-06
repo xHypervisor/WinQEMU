@@ -1249,7 +1249,7 @@ static void tcg_out_qemu_ld_direct(TCGContext *s, TCGReg datalo, TCGReg datahi,
 
 static void tcg_out_qemu_ld(TCGContext *s, const TCGArg *args, bool is_64)
 {
-    TCGReg addr_regl, addr_regh __attribute__((unused));
+    TCGReg addr_regl, addr_regh ATTRIBUTE_UNUSED;
     TCGReg data_regl, data_regh;
     TCGMemOpIdx oi;
     TCGMemOp opc;
@@ -1328,7 +1328,7 @@ static void tcg_out_qemu_st_direct(TCGContext *s, TCGReg datalo, TCGReg datahi,
 
 static void tcg_out_qemu_st(TCGContext *s, const TCGArg *args, bool is_64)
 {
-    TCGReg addr_regl, addr_regh __attribute__((unused));
+    TCGReg addr_regl, addr_regh ATTRIBUTE_UNUSED;
     TCGReg data_regl, data_regh, base;
     TCGMemOpIdx oi;
     TCGMemOp opc;

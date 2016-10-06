@@ -69,7 +69,15 @@ static void patch_reloc(tcg_insn_unit *code_ptr, int type,
 
 /* The CIE and FDE header definitions will be common to all hosts.  */
 typedef struct {
+#ifndef _MSC_VER
     uint32_t len __attribute__((aligned((sizeof(void *)))));
+#else
+#ifndef WIN64
+	__declspec(align(4)) uint32_t len;
+#else
+	__declspec(align(8)) uint32_t len;
+#endif
+#endif
     uint32_t id;
     uint8_t version;
     char augmentation[1];
@@ -79,7 +87,15 @@ typedef struct {
 } DebugFrameCIE;
 
 typedef struct QEMU_PACKED {
+#ifndef _MSC_VER
     uint32_t len __attribute__((aligned((sizeof(void *)))));
+#else
+#ifndef WIN64
+	__declspec(align(4)) uint32_t len;
+#else
+	__declspec(align(sizeof(8)) uint32_t len;
+#endif
+#endif
     uint32_t cie_offset;
     uintptr_t func_start;
     uintptr_t func_len;
@@ -91,9 +107,10 @@ typedef struct QEMU_PACKED {
 } DebugFrameHeader;
 
 static void tcg_register_jit_int(void *buf, size_t size,
-                                 const void *debug_frame,
-                                 size_t debug_frame_size)
-    __attribute__((unused));
+	const void *debug_frame,
+	size_t debug_frame_size)
+	ATTRIBUTE_UNUSED;
+
 
 /* Forward declarations for functions declared and used in tcg-target.c. */
 static int target_parse_constraint(TCGArgConstraint *ct, const char **pct_str);
@@ -118,12 +135,12 @@ static TCGRegSet tcg_target_available_regs[2];
 static TCGRegSet tcg_target_call_clobber_regs;
 
 #if TCG_TARGET_INSN_UNIT_SIZE == 1
-static __attribute__((unused)) inline void tcg_out8(TCGContext *s, uint8_t v)
+static ATTRIBUTE_UNUSED inline void tcg_out8(TCGContext *s, uint8_t v)
 {
     *s->code_ptr++ = v;
 }
 
-static __attribute__((unused)) inline void tcg_patch8(tcg_insn_unit *p,
+static ATTRIBUTE_UNUSED inline void tcg_patch8(tcg_insn_unit *p,
                                                       uint8_t v)
 {
     *p = v;
@@ -131,7 +148,7 @@ static __attribute__((unused)) inline void tcg_patch8(tcg_insn_unit *p,
 #endif
 
 #if TCG_TARGET_INSN_UNIT_SIZE <= 2
-static __attribute__((unused)) inline void tcg_out16(TCGContext *s, uint16_t v)
+static ATTRIBUTE_UNUSED inline void tcg_out16(TCGContext *s, uint16_t v)
 {
     if (TCG_TARGET_INSN_UNIT_SIZE == 2) {
         *s->code_ptr++ = v;
@@ -142,7 +159,7 @@ static __attribute__((unused)) inline void tcg_out16(TCGContext *s, uint16_t v)
     }
 }
 
-static __attribute__((unused)) inline void tcg_patch16(tcg_insn_unit *p,
+static ATTRIBUTE_UNUSED inline void tcg_patch16(tcg_insn_unit *p,
                                                        uint16_t v)
 {
     if (TCG_TARGET_INSN_UNIT_SIZE == 2) {
@@ -154,7 +171,7 @@ static __attribute__((unused)) inline void tcg_patch16(tcg_insn_unit *p,
 #endif
 
 #if TCG_TARGET_INSN_UNIT_SIZE <= 4
-static __attribute__((unused)) inline void tcg_out32(TCGContext *s, uint32_t v)
+static ATTRIBUTE_UNUSED inline void tcg_out32(TCGContext *s, uint32_t v)
 {
     if (TCG_TARGET_INSN_UNIT_SIZE == 4) {
         *s->code_ptr++ = v;
@@ -165,7 +182,7 @@ static __attribute__((unused)) inline void tcg_out32(TCGContext *s, uint32_t v)
     }
 }
 
-static __attribute__((unused)) inline void tcg_patch32(tcg_insn_unit *p,
+static ATTRIBUTE_UNUSED inline void tcg_patch32(tcg_insn_unit *p,
                                                        uint32_t v)
 {
     if (TCG_TARGET_INSN_UNIT_SIZE == 4) {
@@ -177,7 +194,7 @@ static __attribute__((unused)) inline void tcg_patch32(tcg_insn_unit *p,
 #endif
 
 #if TCG_TARGET_INSN_UNIT_SIZE <= 8
-static __attribute__((unused)) inline void tcg_out64(TCGContext *s, uint64_t v)
+static ATTRIBUTE_UNUSED inline void tcg_out64(TCGContext *s, uint64_t v)
 {
     if (TCG_TARGET_INSN_UNIT_SIZE == 8) {
         *s->code_ptr++ = v;
@@ -188,7 +205,7 @@ static __attribute__((unused)) inline void tcg_out64(TCGContext *s, uint64_t v)
     }
 }
 
-static __attribute__((unused)) inline void tcg_patch64(tcg_insn_unit *p,
+static ATTRIBUTE_UNUSED inline void tcg_patch64(tcg_insn_unit *p,
                                                        uint64_t v)
 {
     if (TCG_TARGET_INSN_UNIT_SIZE == 8) {
@@ -392,7 +409,11 @@ void tcg_prologue_init(TCGContext *s)
        tcg_out_tb_finalize.  If there are quite a lot of guest memory ops,
        the number of out-of-line fragments could be quite high.  In the
        short-term, increase the highwater buffer.  */
+#ifndef _MSC_VER
     s->code_gen_highwater = s->code_gen_buffer + (total_size - 64*1024);
+#else
+    s->code_gen_highwater = (unsigned long)s->code_gen_buffer + (total_size - 64*1024);
+#endif
 
     tcg_register_jit(s->code_gen_buffer, total_size);
 

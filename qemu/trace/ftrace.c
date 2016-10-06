@@ -20,6 +20,7 @@ int trace_marker_fd;
 
 static int find_debugfs(char *debugfs)
 {
+#ifndef _MSC_VER
     char type[100];
     FILE *fp;
 
@@ -40,6 +41,9 @@ static int find_debugfs(char *debugfs)
         return 0;
     }
     return 1;
+#else
+	return 0;
+#endif
 }
 
 bool ftrace_init(void)

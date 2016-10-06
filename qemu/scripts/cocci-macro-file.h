@@ -29,7 +29,7 @@
 #define cat(x,y) x ## y
 #define cat2(x,y) cat(x,y)
 #define QEMU_BUILD_BUG_ON(x) \
-    typedef char cat2(qemu_build_bug_on__,__LINE__)[(x)?-1:1] __attribute__((unused));
+    typedef char cat2(qemu_build_bug_on__,__LINE__)[(x)?-1:1] ATTRIBUTE_UNUSED;
 
 #define GCC_FMT_ATTR(n, m) __attribute__((format(gnu_printf, n, m)))
 

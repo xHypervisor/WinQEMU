@@ -13,8 +13,8 @@
 void spl_nand_load_image(void)
 {
 	struct image_header *header;
-	int *src __attribute__((unused));
-	int *dst __attribute__((unused));
+	int *src ATTRIBUTE_UNUSED;
+	int *dst ATTRIBUTE_UNUSED;
 
 	debug("spl: nand - using hw ecc\n");
 	nand_init();

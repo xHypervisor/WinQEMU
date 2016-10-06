@@ -31,7 +31,7 @@ extern char boot_rom_bin_start;
 extern char boot_rom_bin_end;
 
 #if defined(__GNUC__)
-# define UNUSED __attribute__((unused))
+# define UNUSED ATTRIBUTE_UNUSED
 #else
 # define UNUSED
 #endif

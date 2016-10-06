@@ -33,7 +33,7 @@
 #include "core-dc232b/core-isa.h"
 #include "overlay_tool.h"
 
-static XtensaConfig dc232b __attribute__((unused)) = {
+static XtensaConfig dc232b ATTRIBUTE_UNUSED = {
     .name = "dc232b",
     .gdb_regmap = {
         .num_regs = 120,

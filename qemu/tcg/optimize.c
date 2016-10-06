@@ -366,6 +366,7 @@ static TCGArg do_constant_folding_2(TCGOpcode op, TCGArg x, TCGArg y)
         muls64(&l64, &h64, x, y);
         return h64;
 
+#ifndef _MSC_VER
     case INDEX_op_div_i32:
         /* Avoid crashing on divide by zero, otherwise undefined.  */
         return (int32_t)x / ((int32_t)y ? : 1);
@@ -384,7 +385,26 @@ static TCGArg do_constant_folding_2(TCGOpcode op, TCGArg x, TCGArg y)
         return (int64_t)x % ((int64_t)y ? : 1);
     case INDEX_op_remu_i64:
         return (uint64_t)x % ((uint64_t)y ? : 1);
+#else
+	case INDEX_op_div_i32:
+        /* Avoid crashing on divide by zero, otherwise undefined.  */
+        return (int32_t)x / ((int32_t)y ? (int32_t)y : 1);
+    case INDEX_op_divu_i32:
+        return (uint32_t)x / ((uint32_t)y ? (uint32_t)y : 1);
+    case INDEX_op_div_i64:
+        return (int64_t)x / ((int64_t)y ? (int64_t)y : 1);
+    case INDEX_op_divu_i64:
+        return (uint64_t)x / ((uint64_t)y ? (uint64_t)y : 1);
 
+    case INDEX_op_rem_i32:
+        return (int32_t)x % ((int32_t)y ? (int32_t)y : 1);
+    case INDEX_op_remu_i32:
+        return (uint32_t)x % ((uint32_t)y ? (uint32_t)y : 1);
+    case INDEX_op_rem_i64:
+        return (int64_t)x % ((int64_t)y ? (int64_t)y : 1);
+    case INDEX_op_remu_i64:
+        return (uint64_t)x % ((uint64_t)y ? (uint64_t)y : 1);
+#endif
     default:
         fprintf(stderr,
                 "Unrecognized operation %d in do_constant_folding.\n", op);

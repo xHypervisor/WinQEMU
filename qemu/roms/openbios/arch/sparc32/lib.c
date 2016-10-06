@@ -201,8 +201,8 @@ char *obp_dumb_mmap(char *va, int which_io, unsigned int pa,
     return va;
 }
 
-void obp_dumb_munmap(__attribute__((unused)) char *va,
-                     __attribute__((unused)) unsigned int size)
+void obp_dumb_munmap(ATTRIBUTE_UNUSED char *va,
+                     ATTRIBUTE_UNUSED unsigned int size)
 {
     DPRINTF("obp_dumb_munmap: virta 0x%x, sz %d\n", (unsigned int)va, size);
 }

@@ -138,7 +138,7 @@ extern void call_rcu1(struct rcu_head *head, RCUCBFunc *func);
  */
 #define call_rcu(head, func, field)                                      \
     call_rcu1(({                                                         \
-         char __attribute__((unused))                                    \
+         char ATTRIBUTE_UNUSED                                    \
             offset_must_be_zero[-offsetof(typeof(*(head)), field)],      \
             func_type_invalid = (func) - (void (*)(typeof(head)))(func); \
          &(head)->field;                                                 \
@@ -147,7 +147,7 @@ extern void call_rcu1(struct rcu_head *head, RCUCBFunc *func);
 
 #define g_free_rcu(obj, field) \
     call_rcu1(({                                                         \
-        char __attribute__((unused))                                     \
+        char ATTRIBUTE_UNUSED                                     \
             offset_must_be_zero[-offsetof(typeof(*(obj)), field)];       \
         &(obj)->field;                                                   \
       }),                                                                \

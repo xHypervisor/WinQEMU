@@ -400,7 +400,7 @@ static int davinci_mii_phy_write(const char *devname, unsigned char addr, unsign
 }
 #endif
 
-static void  __attribute__((unused)) davinci_eth_gigabit_enable(int phy_addr)
+static void  ATTRIBUTE_UNUSED davinci_eth_gigabit_enable(int phy_addr)
 {
 	u_int16_t data;
 

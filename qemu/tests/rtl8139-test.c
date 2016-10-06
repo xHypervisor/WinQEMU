@@ -45,7 +45,7 @@ static QPCIDevice *get_device(void)
 }
 
 #define PORT(name, len, val) \
-static unsigned __attribute__((unused)) in_##name(void) \
+static unsigned ATTRIBUTE_UNUSED in_##name(void) \
 { \
     unsigned res = qpci_io_read##len(dev, dev_base+(val)); \
     g_test_message("*%s -> %x\n", #name, res); \

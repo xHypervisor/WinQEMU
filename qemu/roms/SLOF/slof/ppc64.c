@@ -86,7 +86,7 @@ write(int fd, const void *buf, int count)
 
 /* This should probably be temporary until a better solution is found */
 void
-asm_cout(long Character, long UART, long NVRAM __attribute__((unused)))
+asm_cout(long Character, long UART, long NVRAM ATTRIBUTE_UNUSED)
 {
 	if (UART)
 		io_putchar(Character);

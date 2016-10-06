@@ -153,7 +153,7 @@ static int gen_get_link_speed(int phy_addr)
 	return -1;
 }
 
-static void  __attribute__((unused))
+static void  ATTRIBUTE_UNUSED
 	keystone2_eth_gigabit_enable(struct eth_device *dev)
 {
 	u_int16_t data;

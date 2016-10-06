@@ -2986,11 +2986,11 @@ struct efab_board_operations sfe4001_ops = {
 	.fini		= sfe4001_fini,
 };
 
-static int sfe4002_init ( struct efab_nic *efab __attribute__((unused)) )
+static int sfe4002_init ( struct efab_nic *efab ATTRIBUTE_UNUSED )
 {
 	return 0;
 }
-static void sfe4002_fini ( struct efab_nic *efab __attribute__((unused)) )
+static void sfe4002_fini ( struct efab_nic *efab ATTRIBUTE_UNUSED )
 {
 }
 
@@ -2999,11 +2999,11 @@ struct efab_board_operations sfe4002_ops = {
 	.fini		= sfe4002_fini,
 };
 
-static int sfe4003_init ( struct efab_nic *efab __attribute__((unused)) )
+static int sfe4003_init ( struct efab_nic *efab ATTRIBUTE_UNUSED )
 {
 	return 0;
 }
-static void sfe4003_fini ( struct efab_nic *efab __attribute__((unused)) )
+static void sfe4003_fini ( struct efab_nic *efab ATTRIBUTE_UNUSED )
 {
 }
 

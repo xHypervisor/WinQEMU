@@ -181,7 +181,7 @@ char *get_nvram_buffer(int len)
  * is unused, but nice in case we ever get a real malloc
  */
 
-void free_nvram_buffer(char *buffer __attribute__((unused)))
+void free_nvram_buffer(char *buffer ATTRIBUTE_UNUSED)
 {
 	nvram_buffer_locked = 0x00;
 }

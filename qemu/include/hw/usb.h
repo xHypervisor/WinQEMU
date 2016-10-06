@@ -321,8 +321,13 @@ typedef struct USBDeviceClass {
      */
     void (*handle_data)(USBDevice *dev, USBPacket *p);
 
+#ifndef _MSC_VER
     void (*set_interface)(USBDevice *dev, int interface,
                           int alt_old, int alt_new);
+#else
+	void(*set_interface)(USBDevice *dev, int _interface,
+		int alt_old, int alt_new);
+#endif
 
     /*
      * Called when the hcd is done queuing packets for an endpoint, only
@@ -580,8 +585,13 @@ void usb_device_handle_control(USBDevice *dev, USBPacket *p, int request,
 
 void usb_device_handle_data(USBDevice *dev, USBPacket *p);
 
+#ifndef _MSC_VER
 void usb_device_set_interface(USBDevice *dev, int interface,
                               int alt_old, int alt_new);
+#else
+void usb_device_set_interface(USBDevice *dev, int _interface,
+                              int alt_old, int alt_new);
+#endif
 
 void usb_device_flush_ep_queue(USBDevice *dev, USBEndpoint *ep);
 

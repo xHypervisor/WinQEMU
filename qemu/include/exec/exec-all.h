@@ -305,7 +305,11 @@ static inline void tb_set_jmp_target(TranslationBlock *tb,
                                      int n, uintptr_t addr)
 {
     uint16_t offset = tb->tb_jmp_offset[n];
+#ifndef _MSC_VER
     tb_set_jmp_target1((uintptr_t)(tb->tc_ptr + offset), addr);
+#else
+    tb_set_jmp_target1((uintptr_t)((unsigned long)tb->tc_ptr + offset), addr);
+#endif
 }
 
 #else

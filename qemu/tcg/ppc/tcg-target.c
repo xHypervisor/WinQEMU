@@ -1614,7 +1614,7 @@ static void tcg_out_qemu_st_slow_path(TCGContext *s, TCGLabelQemuLdst *lb)
 static void tcg_out_qemu_ld(TCGContext *s, const TCGArg *args, bool is_64)
 {
     TCGReg datalo, datahi, addrlo, rbase;
-    TCGReg addrhi __attribute__((unused));
+    TCGReg addrhi ATTRIBUTE_UNUSED;
     TCGMemOpIdx oi;
     TCGMemOp opc, s_bits;
 #ifdef CONFIG_SOFTMMU
@@ -1689,7 +1689,7 @@ static void tcg_out_qemu_ld(TCGContext *s, const TCGArg *args, bool is_64)
 static void tcg_out_qemu_st(TCGContext *s, const TCGArg *args, bool is_64)
 {
     TCGReg datalo, datahi, addrlo, rbase;
-    TCGReg addrhi __attribute__((unused));
+    TCGReg addrhi ATTRIBUTE_UNUSED;
     TCGMemOpIdx oi;
     TCGMemOp opc, s_bits;
 #ifdef CONFIG_SOFTMMU

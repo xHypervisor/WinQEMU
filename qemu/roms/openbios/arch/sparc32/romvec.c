@@ -35,8 +35,8 @@ static void (*sync_hook)(void);
 
 static struct linux_romvec romvec0;
 
-static void doublewalk(__attribute__((unused)) unsigned int ptab1,
-                       __attribute__((unused)) unsigned int va)
+static void doublewalk(ATTRIBUTE_UNUSED unsigned int ptab1,
+                       ATTRIBUTE_UNUSED unsigned int va)
 {
 }
 
@@ -201,10 +201,10 @@ const char *obp_nextprop(int node, const char *name)
     }
 }
 
-int obp_setprop(__attribute__((unused)) int node,
-                       __attribute__((unused)) const char *name,
-		       __attribute__((unused)) char *value,
-		       __attribute__((unused)) int len)
+int obp_setprop(ATTRIBUTE_UNUSED int node,
+                       ATTRIBUTE_UNUSED const char *name,
+		       ATTRIBUTE_UNUSED char *value,
+		       ATTRIBUTE_UNUSED int len)
 {
     DPRINTF("obp_setprop(0x%x, %s) = %s (%d)\n", node, name, value, len);
 
@@ -380,10 +380,10 @@ int obp_inst2pkg(int dev_desc)
     return ret;
 }
 
-int obp_cpustart(__attribute__((unused))unsigned int whichcpu,
-                        __attribute__((unused))int ctxtbl_ptr,
-                        __attribute__((unused))int thiscontext,
-                        __attribute__((unused))char *prog_counter)
+int obp_cpustart(ATTRIBUTE_UNUSEDunsigned int whichcpu,
+                        ATTRIBUTE_UNUSEDint ctxtbl_ptr,
+                        ATTRIBUTE_UNUSEDint thiscontext,
+                        ATTRIBUTE_UNUSEDchar *prog_counter)
 {
     int cpu, found;
     struct linux_prom_registers *smp_ctable = (void *)ctxtbl_ptr;
@@ -400,21 +400,21 @@ int obp_cpustart(__attribute__((unused))unsigned int whichcpu,
               thiscontext, cpu);
 }
 
-int obp_cpustop(__attribute__((unused)) unsigned int whichcpu)
+int obp_cpustop(ATTRIBUTE_UNUSED unsigned int whichcpu)
 {
     DPRINTF("obp_cpustop: cpu %d\n", whichcpu);
 
     return 0;
 }
 
-int obp_cpuidle(__attribute__((unused)) unsigned int whichcpu)
+int obp_cpuidle(ATTRIBUTE_UNUSED unsigned int whichcpu)
 {
     DPRINTF("obp_cpuidle: cpu %d\n", whichcpu);
 
     return 0;
 }
 
-int obp_cpuresume(__attribute__((unused)) unsigned int whichcpu)
+int obp_cpuresume(ATTRIBUTE_UNUSED unsigned int whichcpu)
 {
     DPRINTF("obp_cpuresume: cpu %d\n", whichcpu);
 

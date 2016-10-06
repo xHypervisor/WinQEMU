@@ -885,9 +885,13 @@ static inline int64_t cpu_get_host_ticks(void)
 
 static inline int64_t cpu_get_host_ticks(void)
 {
+#ifndef _MSC_VER
     int64_t val;
     asm volatile ("rdtsc" : "=A" (val));
     return val;
+#else
+	__asm rdtsc;	// The result is in edx:eax
+#endif
 }
 
 #elif defined(__x86_64__)

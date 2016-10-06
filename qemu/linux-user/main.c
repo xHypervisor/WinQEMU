@@ -167,7 +167,7 @@ static inline void start_exclusive(void)
 }
 
 /* Finish an exclusive operation.  */
-static inline void __attribute__((unused)) end_exclusive(void)
+static inline void ATTRIBUTE_UNUSED end_exclusive(void)
 {
     pending_cpus = 0;
     pthread_cond_broadcast(&exclusive_resume);
@@ -1482,7 +1482,7 @@ static int do_store_exclusive(CPUPPCState *env)
 {
     target_ulong addr;
     target_ulong page_addr;
-    target_ulong val, val2 __attribute__((unused)) = 0;
+    target_ulong val, val2 ATTRIBUTE_UNUSED = 0;
     int flags;
     int segv = 0;
 

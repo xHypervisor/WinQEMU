@@ -1414,7 +1414,7 @@ static ExitStatus gen_mtpr(DisasContext *ctx, TCGv vb, int regno)
 
 static ExitStatus translate_one(DisasContext *ctx, uint32_t insn)
 {
-    int32_t disp21, disp16, disp12 __attribute__((unused));
+    int32_t disp21, disp16, disp12 ATTRIBUTE_UNUSED;
     uint16_t fn11;
     uint8_t opc, ra, rb, rc, fpfn, fn7, lit;
     bool islit, real_islit;

@@ -35,28 +35,28 @@ void obp_dumb_memfree(char *va, unsigned size);
 void obp_dumb_memfree_handler(char *va, unsigned size);
 char *obp_dumb_mmap(char *va, int which_io, unsigned int pa, unsigned int size);
 char *obp_dumb_mmap_handler(char *va, int which_io, unsigned int pa, unsigned int size);
-void obp_dumb_munmap(__attribute__((unused)) char *va, __attribute__((unused)) unsigned int size);
-void obp_dumb_munmap_handler(__attribute__((unused)) char *va, __attribute__((unused)) unsigned int size);
+void obp_dumb_munmap(ATTRIBUTE_UNUSED char *va, ATTRIBUTE_UNUSED unsigned int size);
+void obp_dumb_munmap_handler(ATTRIBUTE_UNUSED char *va, ATTRIBUTE_UNUSED unsigned int size);
 int obp_devread(int dev_desc, char *buf, int nbytes);
 int obp_devread_handler(int dev_desc, char *buf, int nbytes);
 int obp_devwrite(int dev_desc, char *buf, int nbytes);
 int obp_devwrite_handler(int dev_desc, char *buf, int nbytes);
 int obp_devseek(int dev_desc, int hi, int lo);
 int obp_devseek_handler(int dev_desc, int hi, int lo);
-int obp_cpustart(__attribute__((unused))unsigned int whichcpu,
-                        __attribute__((unused))int ctxtbl_ptr,
-                        __attribute__((unused))int thiscontext,
-                        __attribute__((unused))char *prog_counter);
-int obp_cpustart_handler(__attribute__((unused))unsigned int whichcpu,
-                        __attribute__((unused))int ctxtbl_ptr,
-                        __attribute__((unused))int thiscontext,
-                        __attribute__((unused))char *prog_counter);
-int obp_cpustop(__attribute__((unused)) unsigned int whichcpu);
-int obp_cpustop_handler(__attribute__((unused)) unsigned int whichcpu);
-int obp_cpuidle(__attribute__((unused)) unsigned int whichcpu);
-int obp_cpuidle_handler(__attribute__((unused)) unsigned int whichcpu);
-int obp_cpuresume(__attribute__((unused)) unsigned int whichcpu);
-int obp_cpuresume_handler(__attribute__((unused)) unsigned int whichcpu);
+int obp_cpustart(ATTRIBUTE_UNUSEDunsigned int whichcpu,
+                        ATTRIBUTE_UNUSEDint ctxtbl_ptr,
+                        ATTRIBUTE_UNUSEDint thiscontext,
+                        ATTRIBUTE_UNUSEDchar *prog_counter);
+int obp_cpustart_handler(ATTRIBUTE_UNUSEDunsigned int whichcpu,
+                        ATTRIBUTE_UNUSEDint ctxtbl_ptr,
+                        ATTRIBUTE_UNUSEDint thiscontext,
+                        ATTRIBUTE_UNUSEDchar *prog_counter);
+int obp_cpustop(ATTRIBUTE_UNUSED unsigned int whichcpu);
+int obp_cpustop_handler(ATTRIBUTE_UNUSED unsigned int whichcpu);
+int obp_cpuidle(ATTRIBUTE_UNUSED unsigned int whichcpu);
+int obp_cpuidle_handler(ATTRIBUTE_UNUSED unsigned int whichcpu);
+int obp_cpuresume(ATTRIBUTE_UNUSED unsigned int whichcpu);
+int obp_cpuresume_handler(ATTRIBUTE_UNUSED unsigned int whichcpu);
 int obp_nextnode(int node);
 int obp_nextnode_handler(int node);
 int obp_child(int node);
@@ -65,14 +65,14 @@ int obp_proplen(int node, const char *name);
 int obp_proplen_handler(int node, const char *name);
 int obp_getprop(int node, const char *name, char *value);
 int obp_getprop_handler(int node, const char *name, char *value);
-int obp_setprop(__attribute__((unused)) int node,
-                       __attribute__((unused)) const char *name,
-		       __attribute__((unused)) char *value,
-		       __attribute__((unused)) int len);
-int obp_setprop_handler(__attribute__((unused)) int node,
-                       __attribute__((unused)) const char *name,
-		       __attribute__((unused)) char *value,
-		       __attribute__((unused)) int len);
+int obp_setprop(ATTRIBUTE_UNUSED int node,
+                       ATTRIBUTE_UNUSED const char *name,
+		       ATTRIBUTE_UNUSED char *value,
+		       ATTRIBUTE_UNUSED int len);
+int obp_setprop_handler(ATTRIBUTE_UNUSED int node,
+                       ATTRIBUTE_UNUSED const char *name,
+		       ATTRIBUTE_UNUSED char *value,
+		       ATTRIBUTE_UNUSED int len);
 const char *obp_nextprop(int node, const char *name);
 const char *obp_nextprop_handler(int node, const char *name);
 char *obp_memalloc(char *va, unsigned int size, unsigned int align);

@@ -4,7 +4,7 @@
 
 DECLARE_GLOBAL_DATA_PTR;
 
-__attribute__((unused)) static void dummy(void)
+ATTRIBUTE_UNUSED static void dummy(void)
 {
 }
 

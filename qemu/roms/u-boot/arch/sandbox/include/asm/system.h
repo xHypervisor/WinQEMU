@@ -8,7 +8,7 @@
 #define __ASM_SANDBOX_SYSTEM_H
 
 /* Define this as nops for sandbox architecture */
-static inline void local_irq_save(unsigned flags __attribute__((unused)))
+static inline void local_irq_save(unsigned flags ATTRIBUTE_UNUSED)
 {
 }
 

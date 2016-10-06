@@ -24,6 +24,10 @@
 
 #include "tcg-be-ldst.h"
 
+#ifdef _MSC_VER
+#undef small
+#endif
+
 #ifndef NDEBUG
 static const char * const tcg_target_reg_names[TCG_TARGET_NB_REGS] = {
 #if TCG_TARGET_REG_BITS == 64
@@ -78,6 +82,10 @@ static const int tcg_target_call_iarg_regs[] = {
     TCG_REG_R9,
 #else
     /* 32 bit mode uses stack based calling convention (GCC default). */
+#ifdef _MSC_VER
+	TCG_REG_RCX        // Will never be used in 32-bits code
+#endif
+	
 #endif
 };
 
@@ -1551,7 +1559,7 @@ static void tcg_out_qemu_ld_direct(TCGContext *s, TCGReg datalo, TCGReg datahi,
 static void tcg_out_qemu_ld(TCGContext *s, const TCGArg *args, bool is64)
 {
     TCGReg datalo, datahi, addrlo;
-    TCGReg addrhi __attribute__((unused));
+    TCGReg addrhi ATTRIBUTE_UNUSED;
     TCGMemOpIdx oi;
     TCGMemOp opc;
 #if defined(CONFIG_SOFTMMU)
@@ -1691,7 +1699,7 @@ static void tcg_out_qemu_st_direct(TCGContext *s, TCGReg datalo, TCGReg datahi,
 static void tcg_out_qemu_st(TCGContext *s, const TCGArg *args, bool is64)
 {
     TCGReg datalo, datahi, addrlo;
-    TCGReg addrhi __attribute__((unused));
+    TCGReg addrhi ATTRIBUTE_UNUSED;
     TCGMemOpIdx oi;
     TCGMemOp opc;
 #if defined(CONFIG_SOFTMMU)
@@ -2110,9 +2118,15 @@ static inline void tcg_out_op(TCGContext *s, TCGOpcode opc,
 }
 
 static const TCGTargetOpDef x86_op_defs[] = {
+#ifndef _MSC_VER
     { INDEX_op_exit_tb, { } },
     { INDEX_op_goto_tb, { } },
     { INDEX_op_br, { } },
+#else
+	{ INDEX_op_exit_tb,{NULL} },
+	{ INDEX_op_goto_tb,{NULL} },
+	{ INDEX_op_br,{NULL} },
+#endif
     { INDEX_op_ld8u_i32, { "r", "r" } },
     { INDEX_op_ld8s_i32, { "r", "r" } },
     { INDEX_op_ld16u_i32, { "r", "r" } },
