@@ -54,9 +54,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -545,5 +542,8 @@
     <ClCompile Include="qemu\tcg\tci\tcg-target.c">
       <Filter>qemu\tcg\tci</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

@@ -144,9 +144,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="posix\include\strings.h" />
     <ClInclude Include="posix\include\sys\time.h" />
     <ClInclude Include="qemu\config-host.h" />
@@ -320,6 +317,9 @@
     <ClCompile Include="qemu\vl.c" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="WinQEMU.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
